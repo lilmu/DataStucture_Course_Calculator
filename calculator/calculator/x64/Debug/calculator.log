@@ -1,0 +1,17 @@
+﻿  evaluate.cpp
+C:\Users\ephra\OneDrive\文件\data structure\PHW#5\Calculator Demo Project\stack.h(42,10): error C2768: '<<': 明確的樣板引數的使用不合法
+  (編譯來源檔案 '../../../PHW#5/Calculator%20Demo%20Project/evaluate.cpp')
+  
+  main.cpp
+C:\Users\ephra\OneDrive\文件\data structure\PHW#5\Calculator Demo Project\stack.h(42,10): error C2768: 'std::<<': 明確的樣板引數的使用不合法
+  (編譯來源檔案 '../../../PHW#5/Calculator%20Demo%20Project/main.cpp')
+  
+  postfix.cpp
+C:\Users\ephra\OneDrive\文件\data structure\PHW#5\Calculator Demo Project\stack.h(42,10): error C2768: '<<': 明確的樣板引數的使用不合法
+  (編譯來源檔案 '../../../PHW#5/Calculator%20Demo%20Project/postfix.cpp')
+  
+  stack.cpp
+C:\Users\ephra\OneDrive\文件\data structure\PHW#5\Calculator Demo Project\stack.h(42,10): error C2768: 'std::<<': 明確的樣板引數的使用不合法
+  (編譯來源檔案 '../../../PHW#5/Calculator%20Demo%20Project/stack.cpp')
+  
+  正在產生程式碼...
