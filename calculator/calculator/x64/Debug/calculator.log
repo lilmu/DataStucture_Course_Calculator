@@ -1,3 +1,9 @@
-﻿main.obj : error LNK2019: 在函式 "public: __cdecl Queue<class Token>::Queue<class Token>(int)" (??0?$Queue@VToken@@@@QEAA@H@Z)main 中參考了無法解析的外部符號
+﻿  evaluate.cpp
+  main.cpp
+  postfix.cpp
+  token.cpp
+  正在產生程式碼...
+main.obj : error LNK2019: 在函式 "public: __cdecl Queue<class Token>::Queue<class Token>(int)" (??0?$Queue@VToken@@@@QEAA@H@Z)main 中參考了無法解析的外部符號
 token.obj : error LNK2001: 無法解析的外部符號 "public: __cdecl Queue<class Token>::Queue<class Token>(int)" (??0?$Queue@VToken@@@@QEAA@H@Z)
-C:\Users\ephra\OneDrive\文件\GitHub\DataStucture_Course_Calculator\calculator\x64\Debug\calculator.exe : fatal error LNK1120: 1 個無法解析的外部符號
+token.obj : error LNK2019: 在函式 "public: void __cdecl Queue<class Token>::Push(class Token const &)" (?Push@?$Queue@VToken@@@@QEAAXAEBVToken@@@Z)"class Queue<class Token> __cdecl tokenize(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?tokenize@@YA?AV?$Queue@VToken@@@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中參考了無法解析的外部符號
+C:\Users\ephra\OneDrive\文件\GitHub\DataStucture_Course_Calculator\calculator\x64\Debug\calculator.exe : fatal error LNK1120: 2 個無法解析的外部符號

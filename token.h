@@ -9,14 +9,17 @@ using namespace std;
 extern int isOperator(char);
 extern int isOperand(char);
 enum class Tag { OPERATOR = 0, OPERAND };  // 0:OPERATOR, 1:OPERAND...
-enum class Operator{ ADD = 0, SUBTRACT, MULTIPLY, DIVIDE, MODULO, LPAREN, RPAREN, BOTTOM, EXP };
+enum class Operator{ ADD = 0, SUBTRACT, MULTIPLY, DIVIDE, MODULO, LPAREN, RPAREN, BOTTOM, EXP, OP};
        // enum Op2 {'+', '-', '*', '/', '%', '(', ')','#'};
 class Token {
 public:
 	Token() { d = 0.0;  o = Operator::ADD; tag = Tag::OPERATOR; };
-	Token(char c) {
+	Token(char c){
 		if (isOperator(c)) tag = Tag::OPERATOR;
 		else if (isOperand(c)) { tag = Tag::OPERAND; d = (double)(c)-(int)('0'); }
+		else {
+			cerr << "Invalid token: " << c << endl;
+		}
 		switch (c) {
 		case '+': o = Operator::ADD; break;
 		case '-': o = Operator::SUBTRACT; break;
