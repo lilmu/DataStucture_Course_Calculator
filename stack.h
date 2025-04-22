@@ -30,7 +30,7 @@ public:
 	      // else remove the item at the front of the Stack and return a pointer to it
 		  void StackFull();
 		  void StackEmpty();
-		  //T* Top(T&) {};
+		  T* Pop(T&);
 private:
 	int top;     //top: index of the topmost element to be retrieved 	
 	T *stack;    // T array pointer

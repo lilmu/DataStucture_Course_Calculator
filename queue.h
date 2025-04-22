@@ -20,7 +20,6 @@ public:
 		return *this;
 	};
 	Queue(int MaxQueueSize =DefaultQSize);
-	Queue(Queue&);
 	Queue(const Queue&);
 	~Queue();
 	void QueueFull() {};
@@ -42,15 +41,6 @@ Queue <T>::Queue(int MaxQueueSize):MaxSize(MaxQueueSize) {
    queue = new T[MaxSize];
    for(int i=0;i<MaxSize; i++) queue[i]=-1;
    front = rear = -1; top = 0;
-}
-
-template <class T>
-Queue <T>::Queue(Queue& rhs) {
-	front = rhs.front; rear = rhs.rear;
-	MaxSize = rhs.MaxSize;
-	top = rhs.top;
-	queue = new T[MaxSize]; 
-	for (int i = 0; i < top; i++) queue[i] = rhs.queue[i];
 }
 
 // copy constructor 
