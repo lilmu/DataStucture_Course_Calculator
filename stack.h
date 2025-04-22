@@ -10,12 +10,13 @@ using namespace std;
 
 template<typename T>
 class Stack{
+	friend ostream& operator<<(ostream&, const Stack <T>&);
 public:
 	Stack(int MaxStackSize = DefaultSize): top(-1), MaxSize(MaxStackSize){
-		T* stack = new T[MaxStackSize];
+		stack = new T[MaxStackSize];
 		// Create an empty Stack whose maximum size is MaxStackSize
 	};
-		  ~Stack() {};
+		  ~Stack() { delete[] stack;};
 		  bool IsFull();
 	      // if number of elements in the Stack is equal to the maximum size of
 	      // the Stack, return TRUE(1); otherwise, return FALSE(0)
@@ -30,22 +31,10 @@ public:
 		  void StackFull();
 		  void StackEmpty();
 		  //T* Top(T&) {};
-
-		  friend ostream& operator<<<>(ostream&, const Stack <T>&);
 private:
 	int top;     //top: index of the topmost element to be retrieved 	
 	T *stack;    // T array pointer
 	int MaxSize;
-};
-
-template <class T>
-ostream& operator<<<>(ostream& os, const Stack <T>& s) {
-	//os << endl << "   Valid data among them are: ";
-	for (int i = 0; i <= s.top; i++) {
-		os << *(s.stack + i) << " ";
-	}
-	cout << endl << endl;
-	return os;
 };
 
 #endif
