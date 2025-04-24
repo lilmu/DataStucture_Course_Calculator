@@ -47,6 +47,7 @@ public:
 	}
 	void Push(const T& item) {
 		if (IsFull()) {
+			cout <<endl << item;
 			QueueFull();
 			return;
 		}

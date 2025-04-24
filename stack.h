@@ -32,7 +32,7 @@ public:
 				  StackFull();
 				  return;
 			  }
-			  *(stack + (++top)) = item;
+			  stack[++top] = item;
 			  return;
 		  }
 	      // if IsFull(), then StackFull(); else insert item at rear of the Stack
@@ -50,7 +50,7 @@ public:
 				  StackEmpty();
 				  return NULL;
 			  }
-			  x = *(stack + (top--));
+			  x = stack[top--];
 			  return &x;
 		  }
 private:

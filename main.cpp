@@ -15,7 +15,7 @@ int main() {
 		getline(cin >> ws, infix);
 		//if(!debug) cout << left << infix<<endl;
 		pfix = postfix(infix); 
-		//cout << "\nEvaluate: "<< infix << " = " << Eval(pfix) << endl;
+		cout << "\nEvaluate: "<< infix << " = " << Eval(pfix) << endl;
 		cout << "Continue? (Y/N) ";
 		cin >> cont; cout << (char) toupper(cont)<<endl;
 	} while (cont == 'Y' || cont == 'y');

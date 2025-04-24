@@ -54,5 +54,6 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 	Token t('#');
 	q.Push(t);
 	cout << t << " ";
+	cout << endl;
 	return q;
 }

@@ -26,7 +26,7 @@ int icp(char input) {
 		case '+': case '-': return 1;
 		case '*': case '/': case '%': return 2;
 		case '^': return 3;
-		case '(': return 4;
+		case '(': return 5;
 		default: return -1;
 	}
 }
@@ -35,7 +35,7 @@ int icp(Token input) {
 		case Operator::ADD: case Operator::SUBTRACT: return 1;
 		case Operator::MULTIPLY: case Operator::DIVIDE: case Operator::MODULO: return 2;
 		case Operator::EXP: return 3;
-		case Operator::LPAREN: return 4;
+		case Operator::LPAREN: return 5;
 		default: return -1;
 	}
 }
@@ -79,7 +79,7 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 		}
 		else {
 			stack.Pop(x);
-			while (isp(x) <= icp(nextToken)) {
+			while (isp(x) >= icp(nextToken)) {
 				Output.Push(x);
 				cout << x << " ";
 				stack.Pop(x);
@@ -95,6 +95,7 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 		cout << x << " ";
 		stack.Pop(x);
 	}
-	
+	Output.Push(x);
+	cout << x << " ";
 	return Output;
 } 
