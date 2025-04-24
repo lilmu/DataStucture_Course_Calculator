@@ -21,7 +21,7 @@ template<typename T>
 T* Stack<T>::Delete(T& x) {
 	if (IsEmpty()) {
 		StackEmpty();
-		return;
+		return NULL;
 	}
 	x = *(stack + (top--));
 	return &x;
@@ -36,3 +36,13 @@ template<typename T>
 void Stack<T>::StackEmpty() { 
 	cout << " [Invalid Infix Expression]::StackEmpty " ;
 }   
+
+template<typename T>
+T* Stack<T>::Pop(T& x) {
+	if (IsEmpty()) {
+		StackEmpty();
+		return NULLs;
+	}
+	x = *(stack + (top--));
+	return &x;
+}

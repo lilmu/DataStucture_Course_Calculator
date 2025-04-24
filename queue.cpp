@@ -58,6 +58,7 @@ T* Queue<T>::Delete(T& x) {
 	front %= MaxSize;
 	x = queue[front];
 	top--;
+	return &x;
 }
 
 template<typename T>
@@ -70,6 +71,7 @@ T* Queue<T>::Pop(T& x) {
 	front %= MaxSize;
 	x = queue[front];
 	top--;
+	return &x;
 }
 
 

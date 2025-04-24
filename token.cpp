@@ -23,15 +23,16 @@ string opToString(Operator o) {
 }
 
 ostream& operator<<(std::ostream& os, const Token& t) {
-	if (t.tag)
+	if (t.tag == Tag::OPERAND)
 		os << t.d << " ";
 	else
-		os << t.o << " ";
+		os << opToString(t.o) << " ";
+		
 	return os;
 }
 
 Queue <Token> tokenize(std::string s) { // tokenize the input
-	cout << setw(10) << left << "TOKENIZE:" << s << endl;
+	cout << setw(10) << left << "TOKENIZE:" ;
 	Queue<Token> q; 
 	for (int i = 0; i < s.length(); i++) {
 		if (isOperand(s[i])) {
@@ -42,11 +43,17 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 				i++;
 			}
 			q.Push(t);
+			cout << t << " ";
 		}
 		else if (isOperator(s[i])) {
 			Token t(s[i]);
 			q.Push(t);
+			cout << t << " ";
 		}
+
 	}
+	Token t('#');
+	q.Push(t);
+	cout << t << " ";
 	return q;
 }
