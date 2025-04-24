@@ -30,7 +30,8 @@ public:
 		MaxSize = rhs.MaxSize;
 		top = rhs.top;
 		queue = new T[MaxSize];
-		for (int i = 0; i < top; i++) queue[i] = rhs.queue[i];
+		for (int i = 0; i < top; i++) 
+			queue[i] = rhs.queue[i];
 	}
 	~Queue() { delete[] queue; }
 	void QueueFull() {
