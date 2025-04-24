@@ -24,36 +24,115 @@ string opToString(Operator o) {
 
 ostream& operator<<(std::ostream& os, const Token& t) {
 	if (t.tag == Tag::OPERAND)
-		os << t.d << " ";
+		os << t.d << "  ";
 	else
-		os << opToString(t.o) << " ";
+		os << opToString(t.o) << "  ";
 		
 	return os;
 }
 
 Queue <Token> tokenize(std::string s) { // tokenize the input
-	cout << setw(10) << left << "TOKENIZE:" ;
+	std::cout << setw(10) << left << "TOKENIZE:" ;
 	Queue<Token> q; 
+	enum class preToken { ADDnSUBTRACT = 0, MULTIPLYnDIVIDEnMODULOnEXP, LPAREN, RPAREN, OPERAND, UNARY, DEFUALT};
+	preToken pre = preToken::DEFUALT;
+	bool unary = 1; // 0/1:negative/positive
 	for (int i = 0; i < s.length(); i++) {
 		if (isOperand(s[i])) {
-			Token t(s[i]);
-			while (isOperand(s[i+1])) {
-				i++;
-				t.d = t.d*10 + ((double)(s[i]) - (int)('0'));
+			if (pre == preToken::RPAREN) {
+				Token t('*');
+				q.Push(t);
+				std::cout << t ;
 			}
-			q.Push(t);
-			cout << t << " ";
+			if (!unary) {
+				Token t(s[i]);
+				t.d = -t.d;
+				while (isOperand(s[++i])) {
+					t.d = t.d * 10 - ((double)(s[i]) - (int)('0'));
+				}
+				i--;
+				q.Push(t);
+				std::cout << t;
+			}
+			else {
+				Token t(s[i]);
+				while (isOperand(s[++i])) {
+					t.d = t.d * 10 + ((double)(s[i]) - (int)('0'));
+				}
+				i--;
+				q.Push(t);
+				std::cout << t;
+			}
+			pre = preToken::OPERAND;
 		}
 		else if (isOperator(s[i])) {
-			Token t(s[i]);
-			q.Push(t);
-			cout << t << " ";
+			if (pre == preToken::UNARY) {
+				std::cerr << "[Invalid Infix Expression]" << endl;
+				return NULL;
+			}
+			else if (pre == preToken::ADDnSUBTRACT || pre == preToken::MULTIPLYnDIVIDEnMODULOnEXP || pre == preToken::LPAREN || pre == preToken::DEFUALT) {
+				if (pre == preToken::ADDnSUBTRACT && (s[i] == '+' || s[i] == '-')) {
+					std::cerr << "[Invalid Infix Expression]" << endl;
+					return NULL;
+				}
+				else if (s[i] == '*' || s[i] == '/' || s[i] == '%' || s[i] == '^' || s[i] == ')') {
+					std::cerr << "[Invalid Infix Expression]" << endl;
+					return NULL;
+				}
+				else if (s[i] == '+') {
+					unary = 1;
+					pre = preToken::UNARY;
+				}
+				else if (s[i] == '-') {
+					unary = 0;
+					pre = preToken::UNARY;
+				}
+				else {
+					Token t(s[i]);
+					q.Push(t);
+					std::cout << t;
+					pre = preToken::LPAREN;
+				}
+			}
+			else if (pre == preToken::RPAREN || pre == preToken::OPERAND) {
+				unary = 1;
+				if (s[i] == '(') {
+					Token t('*');
+					q.Push(t);
+					std::cout << t;
+					pre = preToken::LPAREN;
+				}
+				else if (s[i] == '+' || s[i] == '-') {
+					pre = preToken::ADDnSUBTRACT;
+				}
+				else if (s[i] == ')') {
+					pre = preToken::RPAREN;
+				}
+				else {
+					pre = preToken::MULTIPLYnDIVIDEnMODULOnEXP;
+				}
+				Token t(s[i]);
+				q.Push(t);
+				std::cout << t;
+			}
 		}
-
+		else if (s[i] == ' ') {
+			if (pre == preToken::OPERAND && isOperand(s[i + 1])) {
+				std::cerr << "[Invalid Infix Expression]" << endl;
+				return NULL;
+			}
+			else {
+				continue;
+			}
+		}
+		else {
+			std::cout << "[Invalid Infix Expression]" << endl;
+			return NULL;
+		}
 	}
 	Token t('#');
 	q.Push(t);
-	cout << t << " ";
-	cout << endl;
+	std::cout << t;
+	std::cout << endl;
 	return q;
 }
