@@ -37,10 +37,9 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 	for (int i = 0; i < s.length(); i++) {
 		if (isOperand(s[i])) {
 			Token t(s[i]);
-			i++;
-			while (isOperand(s[i])) {
-				t.d = t.d*10 + ((double)(s[i]) - (int)('0'));
+			while (isOperand(s[i+1])) {
 				i++;
+				t.d = t.d*10 + ((double)(s[i]) - (int)('0'));
 			}
 			q.Push(t);
 			cout << t << " ";

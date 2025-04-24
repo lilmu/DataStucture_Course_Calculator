@@ -73,7 +73,7 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 			stack.Pop(x);
 			while (!(x == '(')) {
 				Output.Push(x);
-				cout << nextToken << " ";
+				cout << x << " ";
 				stack.Pop(x);
 			}
 		}
@@ -81,7 +81,7 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 			stack.Pop(x);
 			while (isp(x) <= icp(nextToken)) {
 				Output.Push(x);
-				cout << nextToken << " ";
+				cout << x << " ";
 				stack.Pop(x);
 			}
 			stack.Push(x);
@@ -92,7 +92,7 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 	stack.Pop(x);
 	while (!(x == '#')) {
 		Output.Push(x);
-		cout << nextToken << " ";
+		cout << x << " ";
 		stack.Pop(x);
 	}
 	

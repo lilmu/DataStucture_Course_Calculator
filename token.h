@@ -17,9 +17,6 @@ public:
 	Token(char c): d(0.0), o(Operator::ADD), tag(Tag::OPERATOR){
 		if (isOperator(c)) tag = Tag::OPERATOR;
 		else if (isOperand(c)) { tag = Tag::OPERAND; d = (double)(c)-(int)('0'); }
-		else {
-			cerr << "Invalid token: " << c << endl;
-		}
 		switch (c) {
 		case '+': o = Operator::ADD; break;
 		case '-': o = Operator::SUBTRACT; break;
