@@ -10,24 +10,23 @@ int main() {
 	string infix ;
 	Queue <Token> pfix;
 	do {
-		//if(debug) logo();
+		if(debug) logo();
 		cout << left << setw(10) << "\nINFIX:    ";
 		getline(cin >> ws, infix);
-		//if(!debug) cout << left << infix<<endl;
+		if(!debug) cout << left << infix<<endl;
 		pfix = postfix(infix); 
-		if (pfix.IsEmpty()) {
-			return -1;
+		if (!pfix.IsEmpty()) {
+			cout << "\nEvaluate: "<< infix << " = " << Eval(pfix) << endl;
 		}
-		cout << "\nEvaluate: "<< infix << " = " << Eval(pfix) << endl;
 		cout << "Continue? (Y/N) ";
 		cin >> cont; cout << (char) toupper(cont)<<endl;
 	} while (cont == 'Y' || cont == 'y');
 	return 0;
 }
 
-//void logo() {
-//	system("CLS");
-//	cout << "Demo program of a NTUST 2022 Calculator by J.-J. Chen\n";
-//	cout << "Enter the infix expression:\n";
-//}
+void logo() {
+	system("CLS");
+	cout << "Program of a NTUST 2025 Calculator by Ephraim Pan\n";
+	cout << "Enter the infix expression:\n";
+}
     

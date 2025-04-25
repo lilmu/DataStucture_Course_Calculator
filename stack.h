@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <ostream>
 using namespace std;
-#define DefaultSize 50
+#define DefaultSize 100
 
 template<typename T>
 class Stack{

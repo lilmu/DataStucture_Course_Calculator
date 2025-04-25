@@ -142,6 +142,10 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 		cerr << "\n[Missing a Right parentheses]\n";
 		return NULL;
 	}
+	if (!(pre == preToken::OPERAND || pre == preToken::RPAREN)) {
+		cerr << "\n[Invalid Infix Expression]\n";
+		return NULL;
+	}
 	Token t('#');
 	q.Push(t);
 	std::cout << t;

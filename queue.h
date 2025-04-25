@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <ostream>
 using namespace std;
-#define DefaultQSize 50
+#define DefaultQSize 100
 
 template<typename T>
 class Queue{
