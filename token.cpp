@@ -37,6 +37,7 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 	enum class preToken { ADDnSUBTRACT = 0, MULTIPLYnDIVIDEnMODULOnEXP, LPAREN, RPAREN, OPERAND, UNARY, DEFUALT};
 	preToken pre = preToken::DEFUALT;
 	bool unary = 1; // 0/1:negative/positive
+	int Paren_c = 0; //Left++/Right--
 	for (int i = 0; i < s.length(); i++) {
 		if (isOperand(s[i])) {
 			if (pre == preToken::RPAREN) {
@@ -92,6 +93,7 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 					q.Push(t);
 					std::cout << t;
 					pre = preToken::LPAREN;
+					Paren_c++;
 				}
 			}
 			else if (pre == preToken::RPAREN || pre == preToken::OPERAND) {
@@ -101,12 +103,18 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 					q.Push(t);
 					std::cout << t;
 					pre = preToken::LPAREN;
+					Paren_c++;
 				}
 				else if (s[i] == '+' || s[i] == '-') {
 					pre = preToken::ADDnSUBTRACT;
 				}
 				else if (s[i] == ')') {
 					pre = preToken::RPAREN;
+					Paren_c--;
+					if (Paren_c < 0) {
+						cerr << "\n[Missing a left parentheses]\n";
+						return NULL;
+					}
 				}
 				else {
 					pre = preToken::MULTIPLYnDIVIDEnMODULOnEXP;
@@ -129,6 +137,10 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 			cerr << "\n[Invalid Infix Expression]\n";
 			return NULL;
 		}
+	}
+	if (Paren_c > 0) {
+		cerr << "\n[Missing a Right parentheses]\n";
+		return NULL;
 	}
 	Token t('#');
 	q.Push(t);
