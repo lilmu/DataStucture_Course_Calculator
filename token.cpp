@@ -67,16 +67,16 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 		}
 		else if (isOperator(s[i])) {
 			if (pre == preToken::UNARY) {
-				std::cerr << "[Invalid Infix Expression]" << endl;
+				cerr << "\n[Invalid Infix Expression]\n";
 				return NULL;
 			}
 			else if (pre == preToken::ADDnSUBTRACT || pre == preToken::MULTIPLYnDIVIDEnMODULOnEXP || pre == preToken::LPAREN || pre == preToken::DEFUALT) {
 				if (pre == preToken::ADDnSUBTRACT && (s[i] == '+' || s[i] == '-')) {
-					std::cerr << "[Invalid Infix Expression]" << endl;
+					cerr << "\n[Invalid Infix Expression]\n";
 					return NULL;
 				}
 				else if (s[i] == '*' || s[i] == '/' || s[i] == '%' || s[i] == '^' || s[i] == ')') {
-					std::cerr << "[Invalid Infix Expression]" << endl;
+					cerr << "\n[Invalid Infix Expression]\n";
 					return NULL;
 				}
 				else if (s[i] == '+') {
@@ -118,7 +118,7 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 		}
 		else if (s[i] == ' ') {
 			if (pre == preToken::OPERAND && isOperand(s[i + 1])) {
-				std::cerr << "[Invalid Infix Expression]" << endl;
+				cerr << "\n[Invalid Infix Expression]\n";
 				return NULL;
 			}
 			else {
@@ -126,7 +126,7 @@ Queue <Token> tokenize(std::string s) { // tokenize the input
 			}
 		}
 		else {
-			std::cout << "[Invalid Infix Expression]" << endl;
+			cerr << "\n[Invalid Infix Expression]\n";
 			return NULL;
 		}
 	}

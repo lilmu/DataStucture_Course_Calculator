@@ -57,8 +57,11 @@ int isOperator(Token input) {
 
 
 Queue <Token> postfix(string e){ // infix to postfix and return a queue
-	Queue <Token> queue = tokenize(e);
-	cout << setw(10) << left << "PFIX: ";
+	Queue <Token> queue = tokenize(e);	
+	if (queue.IsEmpty()){
+		return NULL;
+	}
+	std::cout << setw(10) << left << "PFIX: ";
 	Queue <Token> Output;
 	Stack <Token> stack;
 	Token nextToken,x;
@@ -67,13 +70,13 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 	while (!(nextToken == '#')) {
 		if (isOperand(nextToken)) {
 			Output.Push(nextToken);
-			cout << nextToken << " ";
+			std::cout << nextToken << " ";
 		}
 		else if (nextToken == ')') {
 			stack.Pop(x);
 			while (!(x == '(')) {
 				Output.Push(x);
-				cout << x << " ";
+				std::cout << x << " ";
 				stack.Pop(x);
 			}
 		}
@@ -81,7 +84,7 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 			stack.Pop(x);
 			while (isp(x) >= icp(nextToken)) {
 				Output.Push(x);
-				cout << x << " ";
+				std::cout << x << " ";
 				stack.Pop(x);
 			}
 			stack.Push(x);
@@ -92,10 +95,10 @@ Queue <Token> postfix(string e){ // infix to postfix and return a queue
 	stack.Pop(x);
 	while (!(x == '#')) {
 		Output.Push(x);
-		cout << x << " ";
+		std::cout << x << " ";
 		stack.Pop(x);
 	}
 	Output.Push(x);
-	cout << x << " ";
+	std::cout << x << " ";
 	return Output;
 } 
