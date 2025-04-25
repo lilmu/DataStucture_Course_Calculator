@@ -2,7 +2,7 @@
 #include "stack.h"
 #include "postfix.h"
 #include "queue.h"
-#define debug 1  // set 1/0 for Debug/Relase
+#define debug 0  // set 1/0 for Debug/Relase
 char cont;
 double Eval(Queue<Token>&);
 void logo();
