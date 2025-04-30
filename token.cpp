@@ -34,7 +34,8 @@ ostream& operator<<(std::ostream& os, const Token& t) {
 Queue <Token> tokenize(std::string s) { // tokenize the input
 	std::cout << setw(10) << left << "TOKENIZE:" ;
 	Queue<Token> q; 
-	enum class preToken { ADDnSUBTRACT = 0, MULTIPLYnDIVIDEnMODULOnEXP, LPAREN, RPAREN, OPERAND, UNARY, DEFUALT};
+	enum class preToken { ADDnSUBTRACT = 0, MULTIPLYnDIVIDEnMODULOnEXP, 
+						  LPAREN, RPAREN, OPERAND, UNARY, DEFUALT};
 	preToken pre = preToken::DEFUALT;
 	bool unary = 1; // 0/1:negative/positive
 	int Paren_c = 0; //Left++/Right--

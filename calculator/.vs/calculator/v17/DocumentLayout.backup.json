@@ -3,16 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\calculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\evaluate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\evaluate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -21,10 +24,7 @@
       "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CB321240-B2B2-4653-BD10-F0AFF05EC28E}|calculator.vcxproj|C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,118 +34,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "stack.h",
-              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\stack.h",
-              "RelativeDocumentMoniker": "..\\stack.h",
-              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\stack.h",
-              "RelativeToolTip": "..\\stack.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-23T15:12:44.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "queue.h",
-              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\queue.h",
-              "RelativeDocumentMoniker": "..\\queue.h",
-              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\queue.h",
-              "RelativeToolTip": "..\\queue.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T11:16:32.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\main.cpp",
-              "RelativeDocumentMoniker": "..\\main.cpp",
-              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\main.cpp",
-              "RelativeToolTip": "..\\main.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-23T07:59:14.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "postfix.cpp",
               "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.cpp",
               "RelativeDocumentMoniker": "..\\postfix.cpp",
               "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.cpp",
               "RelativeToolTip": "..\\postfix.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAnwD0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAD0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-24T05:57:01.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T05:57:01.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "token.cpp",
+              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.cpp",
+              "RelativeDocumentMoniker": "..\\token.cpp",
+              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.cpp",
+              "RelativeToolTip": "..\\token.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-22T08:13:59.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "stack.h",
+              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\stack.h",
+              "RelativeDocumentMoniker": "..\\stack.h",
+              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\stack.h",
+              "RelativeToolTip": "..\\stack.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T15:12:44.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "queue.h",
+              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\queue.h",
+              "RelativeDocumentMoniker": "..\\queue.h",
+              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\queue.h",
+              "RelativeToolTip": "..\\queue.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-22T11:16:32.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\main.cpp",
+              "RelativeDocumentMoniker": "..\\main.cpp",
+              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\main.cpp",
+              "RelativeToolTip": "..\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T07:59:14.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "evaluate.cpp",
               "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\evaluate.cpp",
               "RelativeDocumentMoniker": "..\\evaluate.cpp",
               "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\evaluate.cpp",
               "RelativeToolTip": "..\\evaluate.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-22T16:43:40.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "postfix.h",
               "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.h",
               "RelativeDocumentMoniker": "..\\postfix.h",
               "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\postfix.h",
               "RelativeToolTip": "..\\postfix.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-22T08:23:16.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T08:23:16.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "token.h",
               "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.h",
               "RelativeDocumentMoniker": "..\\token.h",
               "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.h",
               "RelativeToolTip": "..\\token.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAsAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-22T08:16:22.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "token.cpp",
-              "DocumentMoniker": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.cpp",
-              "RelativeDocumentMoniker": "..\\token.cpp",
-              "ToolTip": "C:\\Users\\ephra\\OneDrive\\\u6587\u4EF6\\GitHub\\DataStucture_Course_Calculator\\token.cpp",
-              "RelativeToolTip": "..\\token.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-22T08:13:59.384Z",
-              "EditorCaption": ""
             }
           ]
         }
