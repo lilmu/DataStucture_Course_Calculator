@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <ostream>
 using namespace std;
-#define DefaultSize 30
+#define DefaultSize 100
 
 template<typename T>
 class Stack{
@@ -40,10 +40,10 @@ public:
 	      // if IsEmpty(), then StackEmpty() and return 0;
 	      // else remove the item at the front of the Stack and return a pointer to it
 		  void StackFull() {
-			  cout << " [Invalid Infix Expression]::StackFull ";
+			  cout << " The stack is full ";
 		  }
 		  void StackEmpty() {
-			  cout << " [Invalid Infix Expression]::StackEmpty ";
+			  cout << " The stack is empty ";
 		  }
 		  T* Pop(T& x) {
 			  if (IsEmpty()) {
